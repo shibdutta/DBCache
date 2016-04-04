@@ -14,7 +14,7 @@ import net.shiv.dto.DTOFactory;
 
 /**
  * @author Shibashis Dutta
- *
+ * Singleton class
  */
 public class Cache {
 
