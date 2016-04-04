@@ -5,21 +5,22 @@ import net.shiv.dto.BaseDTO;
 
 public class CountryDAO implements DAOLayer{
 
-	
+	Cache cache;
 	@Override
 	public BaseDTO query (Integer pk)
 	{
-		Cache cache = Cache.getInstance();
+		cache = Cache.getInstance();
 		
-		BaseDTO row = cache.queryARow("REF_COUNTRY", pk);
+		BaseDTO row = cache.queryARow("REF_HOLIDAY", pk);
 		
 		return row;
 	}
 
 	@Override
 	public void insertRow(BaseDTO vo) {
-		// TODO Auto-generated method stub
+		cache = Cache.getInstance();
 		
+		cache.insertARow("REF_HOLIDAY", vo);
 	}
 	
 }

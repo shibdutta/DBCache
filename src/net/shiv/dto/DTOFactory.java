@@ -11,7 +11,7 @@ public class DTOFactory {
 			return new CountryTable();
 		case "REF_CURRENCY":
 			return new CurrencyTable();
-		case "yyyy":
+		case "REF_HOLIDAY":
 			return new HolidayTable();
 		default:
 			return null;
